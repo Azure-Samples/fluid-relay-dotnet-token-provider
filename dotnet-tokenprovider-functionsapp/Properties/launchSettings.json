@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "fluidrelay_dotnet_tokenprovider_sample": {
+    "dotnet-tokenprovider-functionsapp": {
       "commandName": "Project",
       "commandLineArgs": "--port 7215",
       "launchBrowser": false

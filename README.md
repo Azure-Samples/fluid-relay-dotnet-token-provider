@@ -2,5 +2,5 @@
 
 This repository contains various samples for implementing token providers.
 
-## [Token Provider Sample](/fluidrelay-dotnet-tokenprovider-sample/README.md)
+## [Token Provider Sample](/dotnet-tokenprovider-functionsapp)
 Sample token provider similar to example in the Fluid Relay documentation

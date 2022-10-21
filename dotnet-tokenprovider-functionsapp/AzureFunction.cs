@@ -13,7 +13,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace fluidrelay_dotnet_tokenprovider_sample
+namespace dotnet_tokenprovider_functionsapp
 {
     public static class AzureFunction
     {
