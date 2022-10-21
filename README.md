@@ -1,4 +1,4 @@
-# Fluid Relay .NET Token Provider Samples
+# Fluid Relay .NET Token Provider Samples for implementing token providers.
 
 This repository contains various samples
 
