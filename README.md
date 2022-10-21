@@ -1,6 +1,6 @@
 # Fluid Relay .NET Token Provider Samples 
 
-This repository contains various samples for implementing token providers.
+This repository contains a .NET sample for implementing a fluid relay token provider in an Azure Functions app.
 
-## [Token Provider Sample](/dotnet-tokenprovider-functionsapp)
+## [.NET Token Provider Sample](/dotnet-tokenprovider-functionsapp)
 Sample token provider similar to example in the Fluid Relay documentation
