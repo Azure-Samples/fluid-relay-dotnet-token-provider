@@ -27,7 +27,6 @@ namespace dotnet_tokenprovider_functionsapp
             string content = await new StreamReader(req.Body).ReadToEndAsync();
             JObject body = !string.IsNullOrEmpty(content) ? JObject.Parse(content) : null;
 
-            // tenantId, documentId, userId and userName are required parameters
             string tenantId = (req.Query["tenantId"].ToString() ?? body["tenantId"]?.ToString()) as string;
             string documentId = (req.Query["documentId"].ToString() ?? body["documentId"]?.ToString() ?? null) as string;
             string userId = (req.Query["userId"].ToString() ?? body["userId"]?.ToString()) as string;
@@ -44,7 +43,10 @@ namespace dotnet_tokenprovider_functionsapp
                 return new NotFoundObjectResult($"No key found for the provided tenantId: ${tenantId}");
             }
 
-            var user = new { name = userName, id = userId };
+            //  If a user is not specified, the token will not be associated with a user, and a randomly generated mock user will be used instead
+            var user = (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userId)) ? 
+                new { name = Guid.NewGuid().ToString(), id = Guid.NewGuid().ToString() } :
+                new { name = userName, id = userId };
 
             // Will generate the token and returned by an ITokenProvider implementation to use with the AzureClient.
             string token = GenerateToken(
