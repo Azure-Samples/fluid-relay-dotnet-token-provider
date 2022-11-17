@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "dotnet-tokenprovider-functionsapp": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7215",
+      "launchBrowser": false
+    }
+  }
+}
